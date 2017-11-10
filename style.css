@@ -60,3 +60,11 @@ div.tab button.active {
     border: 1px solid #ccc;
     border-top: none;
 }
+
+.search
+{
+width: 400px;
+height: 50px;
+    margin: 10px;
+    font-size:120%;
+}
