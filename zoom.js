@@ -1,8 +1,16 @@
-console.log($);    
+   
     
-    
-$.getJSON( "ajax/test.json", function(data) {
-    
+$.ajax({
+  dataType: "json",
+  url: "products.json",
+  data: "",
+  success: function(data){
+    console.log("hello");  
+  }
+});
+
+$.getJSON( "products.json", function(data) {
+    console.log(data);
 });    
     
 function openCity(evt, cityName) {
