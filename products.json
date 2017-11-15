@@ -2,34 +2,34 @@
 {
    "products":[
       {
-         "Name":"Just Cause 2",
-         "Genre":"Action",
-         "Price":"$29.99",
-         "Image":""  
+         "name":"Just Cause 2",
+         "genre":"Action",
+         "price":"$29.99",
+         "image":"justcause2.jpg"  
       },
       {
-         "Name":"Dreadout",
-         "Genre":"Horror",
-         "Price":"$14.99",
-         "Image":""  
+         "name":"Dreadout",
+         "genre":"Horror",
+         "price":"$14.99",
+         "image":"dreadout.png"  
       },
       {
-         "Name":"Black Closet",
-         "Genre":"Puzzle",
-         "Price":"$19.99",
-         "Image":""  
+         "name":"Black Closet",
+         "genre":"Puzzle",
+         "price":"$19.99",
+         "image":"blackcloset.jpg"  
       },
       {
-         "Name":"Darkest Dungeon",
-         "Genre":"RPG",
-         "Price":"$24.99",
-         "Image":""  
+         "name":"Darkest Dungeon",
+         "genre":"RPG",
+         "price":"$24.99",
+         "image":"darkestdungeon.png"  
       },
       {
-         "Name":"The Long Dark",
-         "Genre":"Survival",
-         "Price":"$34.99",
-         "Image":""  
+         "name":"The Long Dark",
+         "genre":"Survival",
+         "price":"$34.99",
+         "image":"thelongdark.jpg"  
       }
       
    ]
