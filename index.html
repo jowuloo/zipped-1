@@ -10,8 +10,6 @@
 
 <div class="tab">
     <button class="tablinks" onclick="openCity(event, 'Catalog')">Catalog</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
   <input class="search" type="text" placeHolder="Search">
 </div>
 
@@ -24,16 +22,24 @@
     <p>Survival</p>
     <p>On Sale!</p>
 </div>
-
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
-</div>
-
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
+    
+    <img src="img/icon-reg.png" class="icon"/>
+                    <a href="#" id="registration-link">Register</a>
+                </div>
+                <div id="registration-visible">
+                    <form>
+                        <div class="form-header">
+                            <span>Form of Registration</span>
+                            <button class="closer btn-closer"></button>
+                        </div>
+                        <input type="text" placeholder="Last Name"/>
+                        <input type="text" placeholder="Name"/>
+                        <input type="text" placeholder="Email"/>
+                        <input type="submit" value="Register"/>
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div>
 
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 </script>
