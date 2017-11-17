@@ -69,3 +69,54 @@ height: 34px;
     font-size:120%;
     border: 7px solid black;
 }
+
+/* holds all product tiles */
+#contain {
+    width:98vw;
+    display:flex;
+    margin-top:10px;
+    display:1px solid red;
+}
+
+/* product listing */
+#contain .product {
+    padding-bottom:0px;
+    display:inline;
+    width:50vw;
+}
+
+/* product "tile" image */
+
+#contain .product img {
+    flex-grow:1;
+    width:25vw;
+    height:12vw;
+    filter:saturate(60%) brightness(90%);
+    transition:1s;
+    transition-property:filter;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius:15px;
+}
+
+/* on-hover image effects */
+
+#contain .product img:hover{
+    filter:none;
+    transition-property:filter;
+    transition-duration:1s;
+}
+
+#contain .product .description {
+    color:rgba(255,255,255,0.8);
+    font-weight:lighter;
+    flex-grow:1;
+    width:21vw;
+    height:10vw;
+    padding:1vw;
+    padding-right:1vw;
+    background:rgba(0,0,0,1);
+    position:fixed;
+    overflow-y:scroll;
+    border-top-right-radius:15px;
+    border-bottom-right-radius:15px;
+}
