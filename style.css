@@ -1,7 +1,19 @@
-body {font-family: arial;}
+body {
+    font-family: arial;
+    background-color:black;
+    z-index:2;
+    font-size:1.2vw;
+}
+
+body{
+    background-image:url('http://i307.photobucket.com/albums/nn288/el-ementrix/handpainted_wall2.jpg');
+    background-blend-mode:  opacity:0.6;
+    z-index:1;
+}
 
 /* Style the logo */
 div.logo {
+    color: rgba(255,255,255,0.6);
     font-size:40px;
     margin-left:10px;
     height:40px;
@@ -9,11 +21,11 @@ div.logo {
     margin-bottom:10px;
     text-transform:uppercase;
     font-weight:bolder;
-    text-shadow:4px 4px red;
+    text-shadow:4px 4px rgba(0,0,0,0.4);
 }
 
-    border: 1px solid #ffd700;
 /* Style the tab */
+
 div.tab {
     overflow: hidden;
 }
@@ -22,21 +34,22 @@ div.tab {
 div.tab button {
     background-color: inherit;
     float: left;
-    border: 7px solid red;
     outline: none;
     cursor: pointer;
     padding: 1px 38px;
     transition: 0.3s;
     font-size: 15px;
-    color: white;
+    color: rgba(255,255,255,0.6);
     background-color:black;
     font-size:120%;
     margin-left:5px;
     transition:.1s;
     width:200px;
-    height:50px;
+    height:44px;
     font-weight:normal;
     text-transform:uppercase;
+    border-radius:15px;
+    border:none;
 }
 
 /* Change background color of buttons on hover */
@@ -67,14 +80,20 @@ width: 400px;
 height: 34px;
     margin-left:10px;
     font-size:120%;
-    border: 7px solid black;
+    background:black;
+    color:rgba(255,255,255,0.8);
+    padding:6px;
+    border-radius:15px;
+    border:none;
+    text-align:center;
+    text-transform:uppercase;
 }
 
-/* holds all product tiles */
+/* holds x2 product tiles per container */
 #contain {
-    width:98vw;
+    width:100vw;
     display:flex;
-    margin-top:10px;
+    margin-top:20px;
     display:1px solid red;
 }
 
@@ -82,7 +101,8 @@ height: 34px;
 #contain .product {
     padding-bottom:0px;
     display:inline;
-    width:50vw;
+    width:46vw;
+    padding-right:10vw;
 }
 
 /* product "tile" image */
@@ -107,12 +127,14 @@ height: 34px;
 }
 
 #contain .product .description {
-    color:rgba(255,255,255,0.8);
+    color:rgba(255,255,255,0.6);
     font-weight:lighter;
     flex-grow:1;
     width:21vw;
-    height:10vw;
+    height:11vw;
     padding:1vw;
+    padding-top:0px;
+    padding-bottom:1vw;
     padding-right:1vw;
     background:rgba(0,0,0,1);
     position:fixed;
