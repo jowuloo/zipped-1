@@ -1,16 +1,8 @@
-   
-    
-$.ajax({
-  dataType: "json",
-  url: "products.json",
-  data: "",
-  success: function(data){
-    console.log("hello");  
-  }
-});
+var products;
 
 $.getJSON( "products.json", function(data) {
-    console.log(data);
+    products = data.products;
+    console.log(products);
 });    
     
 function openCity(evt, cityName) {
@@ -26,3 +18,22 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+/*var registration = document.getElementById('registration-link');
+var visible = document.getElementById('registration-visible');
+registration.addEventListener('click', function () {
+   visible.classList.add("visible");
+});
+*/
+
+
+
+
+
+(function(){
+ 
+  $("#cart").on("click", function() {
+    $(".shopping-cart").fadeToggle( "fast");
+  });
+  
+})();
