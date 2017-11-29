@@ -1,10 +1,24 @@
 var products;
 
+
 $.getJSON( "products.json", function(data) {
     products = data.products;
-    console.log(products);
+    show(products);
 });    
+
+
+function show(products) {
+    for(let i = 0; i < products.length; i++) {
+        console.log(products[i]);
+        const elem = document.createElement("div");
+        elem.innerHTML = "<h3>" + products[i].Name + products[i].Genre + products[i].Price + products[i].Description + "</h3>";
+        document.getElementById("products").appendChild(elem);
+    }
     
+    
+}
+
+
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
