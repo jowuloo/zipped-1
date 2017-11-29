@@ -11,7 +11,7 @@ function show(products) {
     for(let i = 0; i < products.length; i++) {
         console.log(products[i]);
         const elem = document.createElement("div");
-        elem.innerHTML = "<h3>" + products[i].Name + products[i].Genre + products[i].Price + products[i].Description + "</h3>";
+        elem.innerHTML = "<h3>" + products[i].Name + "</h3>" + products[i].Genre + products[i].Price + "<p>" + products[i].Description + "</p>";
         document.getElementById("products").appendChild(elem);
     }
     
