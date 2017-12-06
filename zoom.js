@@ -32,7 +32,7 @@ function show(products) {
     for(let i = 0; i < products.length; i++) {
         //console.log(products[i]);
         const elem = document.createElement("div");
-        elem.innerHTML = "<div id='contain'><span class='product'><img src='" + products[i].Image + "'><span class='description'><h3>" + products[i].Name + "</h3>" + products[i].Genre + "<p>" + products[i].Price + "</p>" + "<p>" + products[i].Description + "</p><a href='dorejepov.github.io/dorejepov.github.io/zipped/dorejepov.github.io/zipped/signUp.html' type='button' class='shisui'>Buy</button></span></span></div>";
+        elem.innerHTML = "<div id='contain'><span class='product'><img src='" + products[i].Image + "'><span class='description'><h3>" + products[i].Name + "</h3>" + products[i].Genre + "<p>" + products[i].Price + "</p>" + "<p>" + products[i].Description + "</p><a href='http://127.0.0.1:49620/signUp.html' type='button' class='shisui'>Buy</button></span></span></div>";
         productsElem.appendChild(elem);
     }
     
