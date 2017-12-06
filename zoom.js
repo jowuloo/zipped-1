@@ -1,91 +1,76 @@
-use = "strict";
-var products;
-const data = [];
-const productsElem = document.getElementById("products");
-const inputBox = document.getElementById("search-box");
 
-
-
-$.getJSON( "products.json", function(data) {
-    products = data.products;
-    show(products);
-});    
-
-// Listen for keydown events on the search box and filter products
-inputBox.addEventListener("keydown", function (e) {
-
-  // Show filtered set of products. The 1 ms delay is 
-  // a hack so that inputBox.value is accurate
-  setTimeout(function () {
-
-    // Clear previous list of products
-    productsElem.innerHTML = "";
-
-      console.log();
+{
+   "products":[
+      {
+         "Name":"Just Cause 2 ",
+         "Genre":"Genre: Action ",
+         "Price":"Price: $29.99 ",
+         "Image":"assets/justcause2.jpg",
+         "Description": "Just Cause 2 is a 2010 open world action-adventure video game developed by Avalanche Studios, published by Eidos Interactive and distributed by Square Enix for Microsoft Windows, PlayStation 3 and Xbox 360. "
+      },
+      {
+         "Name":"Dreadout ",
+         "Genre":"Genre: Horror ",
+         "Price":"Price: $14.99 ",
+         "Image":"assets/dreadout.png",
+         "Description":"DreadOut is an indie survival horror video game developed by Digital Happiness and published by PT Digital Semantika Indonesia for Microsoft Windows, OS X and Linux. A port for PlayStation 4 was announced but never released. "
+      },
+      {
+         "Name":"Black Closet ",
+         "Genre":"Genre: Puzzle ",
+         "Price":"Price: $19.99 ",
+         "Image":"assets/blackcloset.jpg" ,
+         "Description":"Black Closet is a mystery visual novel, strategy RPG and life simulation game developed and published by Hanako Games and released on September 16, 2015 for Windows, Mac OS X and Linux on the digital distribution service Steam. "
+      },
+      {
+         "Name":"Darkest Dungeon ",
+         "Genre":"Genre: RPG ",
+         "Price":"Price: $24.99 ",
+         "Image":"assets/darkestdungeon.png",
+         "Description": "Darkest Dungeon is a dungeon crawling video game developed and published by indie game developer Red Hook Studios. "
+      },
+      {
+         "Name":"The Long Dark ",
+         "Genre":"Genre: Survival ",
+         "Price":"Price: $34.99 ",
+         "Image":"assets/thelongdark.jpg" ,
+         "Description":"The Long Dark is a first-person survival video game developed and published by Hinterland Studio. The player assumes the role of a crash-landed bush pilot who must survive the frigid Canadian wilderness after a global disaster. "
+      },
       
-    // Show the newly filtered list
-    show(filter(products, inputBox.value));
-  }, 1);
-});
-
-function show(products) {
-    for(let i = 0; i < products.length; i++) {
-        //console.log(products[i]);
-        const elem = document.createElement("div");
-        elem.innerHTML = "<div id='contain'><span class='product'><img src='" + products[i].Image + "'><span class='description'><h3>" + products[i].Name + "</h3>" + products[i].Genre + "<p>" + products[i].Price + "</p>" + "<p>" + products[i].Description + "</p><button type=\"button\">Buy</button></span></span></div>";
-        productsElem.appendChild(elem);
-    }
-    
-    
-}
-// Returns an array of data matching a search term
-function filter(data, term) {
-
-  // array.filter returns an array with only items 
-  // returned by the parameter function
-  return data.filter(function (e) {
-
-    // Look at each value in the product object 
-    // and compare it to the search term
-    for (const property in e) {
-      if (e[property].toString().indexOf(term) >= 0) {
-        return e;
+      {
+         "Name":"Grand Theft Auto 5 ",
+         "Genre":"Action ",
+         "Price":"$59.99 ",
+         "Image":"assets/grandtheftautoV.jpeg" ,
+         "Description":"Grand Theft Auto V is an action-adventure video game developed by Rockstar North and published by Rockstar Games. Set within the fictional state of San Andreas, based on Southern California, the single-player story follows three criminals and their efforts to commit heists while under pressure from a government agency."
+      },
+      {
+         "Name":"Battlefield 4 ",
+         "Genre":"Action ",
+         "Price":"$14.99 ",
+         "Image":"assets/battlefield4.png" ,
+         "Description":"Battlefield 4 is a first-person shooter video game developed by video game developer EA DICE and published by Electronic Arts."
+      },
+      {
+         "Name":"Miasmata ",
+         "Genre":"Survival ",
+         "Price":"$19.99 ",
+         "Image":"assets/miasmata.jpg" ,
+         "Description":"Miasmata is a survival indie video game developed by brothers Joe and Bob Johnson under the studio name IonFX."
+      },
+      {
+         "Name":"Layers of Fear ",
+         "Genre":"Horror ",
+         "Price":"$14.99 ",
+         "Image":"assets/layersoffear.jpg" ,
+         "Description":"Layers of Fear is a psychological horror video game developed and published by Bloober Team. "
+      },
+      {
+         "Name":"Invisible, Inc. ",
+         "Genre":"Puzzle ",
+         "Price":"$9.99 ",
+         "Image":"assets/invisibleinc.jpg" ,
+         "Description":"Invisible, Inc. is a turn-based tactics stealth video game incorporating elements of roguelike gameplay, developed by Canadian independent studio Klei Entertainment.  "
       }
-    }
-  });
-}                  
-
-function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
+   ]
 }
-
-/*var registration = document.getElementById('registration-link');
-var visible = document.getElementById('registration-visible');
-registration.addEventListener('click', function () {
-   visible.classList.add("visible");
-});
-*/
-
-
-
-
-
-(function(){
- 
-  $("#cart").on("click", function() {
-    $(".shopping-cart").fadeToggle( "fast");
-  });
-  
-})();
-
-show(data);
