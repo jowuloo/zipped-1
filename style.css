@@ -3,7 +3,7 @@ body {
     background-color:black;
     z-index:2;
     font-size:1.2vw;
-    background-image:url('assets/background.jpeg');
+    background-image:url('assets/pdf-1.jpg');
     background-attachment:fixed;
     background-size:cover;
 }
@@ -83,7 +83,7 @@ div.tab button.active {
 {
 width: 400px;
 height: 34px;
-    margin-left:10px;
+    margin-left:450px;
     font-size:120%;
     background-color:rgba(255,255,255,0.8);
     color:black;
